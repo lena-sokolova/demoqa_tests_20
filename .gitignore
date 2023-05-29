@@ -1,5 +1,4 @@
 /.gradle
-/gradle/wrapper
 /.idea
 *.class
 *.log
