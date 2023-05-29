@@ -35,11 +35,11 @@ public class FillFormTests {
         $(".react-datepicker__month-select").selectOption("July");
         $(".react-datepicker__year-select").selectOption("1989");
         $(".react-datepicker__day--007").click();
-        $("#subjectsWrapper").click();
         $("#subjectsInput").setValue("English").pressEnter();
         $("#subjectsInput").setValue("Economics").pressEnter();
         $("#hobbiesWrapper").$(byText("Sports")).click();
-        $("#uploadPicture").uploadFile(new File("src/test/resources/nature.jpg"));
+//        $("#uploadPicture").uploadFile(new File("src/test/resources/nature.jpg"));
+        $("#uploadPicture").uploadFromClasspath("nature.jpg");
         $("#currentAddress").setValue("Some address");
         $("#stateCity-wrapper").click();
         $("#stateCity-wrapper").$(byText("Rajasthan")).click();
@@ -59,6 +59,5 @@ public class FillFormTests {
         $(".table-responsive").shouldHave(text("nature.jpg"));
         $(".table-responsive").shouldHave(text("Some address"));
         $(".table-responsive").shouldHave(text("Rajasthan Jaipur"));
-        $("#closeLargeModal").click();
     }
 }
